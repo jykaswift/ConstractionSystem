@@ -1,0 +1,19 @@
+.anim-row {
+  animation-name: color_change;
+  animation-duration: 1s;
+  animation-iteration-count: initial;
+}
+
+@keyframes color_change {
+  from {
+    background-color: orange;
+  }
+
+  to {
+    background-color: white;
+  }
+}
+
+.highlight {
+  background-color: #ff6;
+}

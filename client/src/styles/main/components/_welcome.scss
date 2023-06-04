@@ -1,0 +1,63 @@
+.content__welcome {
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.welcome__grid {
+  display: grid;
+  grid-template-columns: 53% 47%;
+}
+
+.welcome {
+}
+
+.welcome__info {
+  align-self: center;
+  display: grid;
+  grid-template: auto auto auto / 1fr;
+}
+
+.welcome__title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 64px;
+  margin-bottom: 15px;
+}
+
+.welcome__subtitle {
+  width: 79%;
+  font-family: 'Roboto Light', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #5A5A5A;
+  margin-bottom: 35px;
+}
+
+.welcome__subtitle span{
+  font-weight: 700;
+}
+
+.welcome_button {
+
+  border-radius: 10px;
+  background: linear-gradient(268.41deg, #0F3B61 2.67%, #4BD095 98.49%);
+  box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.25);
+  justify-self: start;
+  text-decoration: none;
+  color: #fff;
+  padding: 25px 80px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.welcome__dino {
+  justify-self: center;
+}
+
+.welcome__dino img{
+  max-width: 100%;
+}

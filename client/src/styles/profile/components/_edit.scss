@@ -1,0 +1,148 @@
+
+.panels__edit {
+  margin-left: 150px;
+}
+
+.edit__item {
+  margin-bottom: 13px;
+
+
+}
+
+.edit__text {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.edit__success {
+  text-align: center;
+  color: green;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.edit__error {
+  text-align: center;
+  color: red;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.edit__input {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  padding-left: 30px;
+  height: 53px;
+  width: 100%;
+}
+
+.edit__button {
+  background: linear-gradient(90.34deg, #0F3B61 30.48%, #4BD095 98.18%);
+  display: block;
+  border-radius: 10px;
+  width: 45%;
+  text-align: center;
+  height: 63px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:hover {
+
+    &:enabled {
+      box-shadow: 0 0.5em 0.5em -0.4em green;
+      transform: translateY(-0.25em);
+    }
+
+  }
+
+  &:disabled {
+    background: gray;
+  }
+
+  &:active {
+
+
+    &:enabled {
+      box-shadow: 0 4px 8px green;
+      transform: scale(.98);
+    }
+
+
+  }
+
+}
+
+
+
+@media (max-width: 1199px) {
+  .panels__edit {
+    margin-left: 25px;
+  }
+
+  .edit__button {
+    width: 60%;
+  }
+}
+
+@media (max-width: 959px) {
+  .panels__edit {
+    margin-left: 0;
+  }
+
+  .edit__text {
+    margin-bottom: 15px;
+  }
+
+  .edit__item {
+    margin-bottom: 20px;
+  }
+
+  .edit__button {
+    margin: 30px auto 0;
+  }
+
+
+
+}
+
+@media (max-width: 639px) {
+  .edit__input {
+    font-size: 16px;
+    height: 49px;
+  }
+
+  .edit__button {
+    width: 70%;
+    font-size: 18px;
+    height: 51px;
+    padding-top: 16px;
+  }
+
+}
+
+@media (max-width: 479px) {
+  .edit__item {
+    margin-bottom: 14px;
+  }
+
+  .edit__text {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .edit__input {
+    font-size: 14px;
+    height: 46px;
+  }
+
+  .edit__button {
+    width: 95%;
+    font-size: 16px;
+    height: 49px;
+  }
+}

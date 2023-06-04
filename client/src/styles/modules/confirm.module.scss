@@ -1,0 +1,21 @@
+.confirmBlock {
+  margin-top: 50px;
+  height: 200px;
+  background-color: white;
+  width: 100%;
+  padding-top: 50px;
+
+  p {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  h1 {
+    cursor: pointer;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 24px;
+    text-decoration: underline;
+  }
+
+}

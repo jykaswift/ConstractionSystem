@@ -1,0 +1,79 @@
+version: '3'
+services:
+  dvs_www:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    depends_on:
+      - elasticsearch
+    ports:
+      - '4444:4444'
+    environment:
+      - SERVER_PORT=4444
+      - ELASTIC_HOST=elasticsearch
+      - ELASTIC_PORT=9200
+      - DB_NAME=reference_system
+      - DB_USER=postgres
+      - DB_PASSWORD=551880
+      - DB_PORT=5432
+      - DB_HOST=dvs_db
+      - JWT_ACCESS_KEY=ref-jwt-access-key
+      - JWT_REFRESH_KEY=ref-jwt-refresh-key
+      - JWT_ACTIVATE_KEY=ref-jwt-activate-key
+      - SMTP_HOST=smtp.gmail.com
+      - SMTP_PORT=587
+      - SMTP_USER=jykaswift@gmail.com
+      - SMTP_PASSWORD=mzoiaxxfznwzptnf
+      - CLIENT_DOMAIN=http://localhost:3000
+      - CRYPTO_KEY=refsystemkeyforregistration  
+    networks:
+      - dvs_net      
+    
+  dvs_db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=551880
+      - POSTGRES_DB=reference_system
+    volumes:
+      - 'pg_data:/var/lib/postgresql/data'
+    networks:
+      - dvs_net
+      
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    environment:
+      - node.name=es-node
+      - cluster.name=es-cluster
+      - discovery.type=single-node
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+    ports:
+      - 9200:9200
+      - 9300:9300  
+    depends_on:
+      - dvs_db
+    volumes:
+      - '/Users/vlad/PycharmProjects/gost_parser/es/export/es_html/config/local-es:/usr/share/elasticsearch/data'
+    networks:
+      - dvs_net
+
+  kibana:
+    image: kibana:7.10.1
+    environment:
+      - "ELASTICSEARCH_URL=http://es-node:9200"
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    restart: "unless-stopped"
+    networks:
+      - dvs_net
+      
+      
+volumes:
+  pg_data:
+  es_data:
+  
+networks:
+  dvs_net:

@@ -1,0 +1,46 @@
+
+.advantages__flex {
+  margin-top: 57px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+  row-gap: 25px;
+}
+
+.advantages__item {
+  text-align: center;
+  background-color: #ffffff;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.advantages__item:nth-child(1),
+.advantages__item:nth-child(5),
+.advantages__item:nth-child(9) {
+  background: linear-gradient(90.34deg, #0F3B61 30.48%, #4BD095 98.18%);
+  color: white;
+  font-weight: 700;
+}
+
+.advantages__item:nth-child(10) {
+  margin-right: 400px;
+}
+
+.advantages__item:nth-child(3) span {
+  display: none;
+}
+
+.advantages__item:nth-child(11) {
+  margin-left: 480px;
+}
+
+.advantages__dino {
+  display: block;
+  max-width: 55%;
+  margin: 0 auto;
+}

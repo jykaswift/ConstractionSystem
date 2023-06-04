@@ -1,0 +1,93 @@
+@import "../common/header";
+@import "../libs/nullstyle";
+@import "../common/footer";
+@import "components/top";
+@import "components/sidebar";
+@import "components/edit";
+@import "components/history";
+@import "components/favorite";
+@import "components/bookmarks";
+@import "components/projects";
+
+
+.content__profile {
+  font-family: "Roboto Light", sans-serif;
+  font-weight: 400 ;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 150px;
+}
+
+
+
+.profile__panels {
+  flex-grow: 1;
+}
+
+.profile__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 38px;
+}
+
+
+
+
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 900px;
+  }
+
+}
+
+@media (max-width: 959px) {
+  .container {
+    max-width: 580px;
+  }
+
+
+
+  .content__profile {
+    flex-direction: column;
+    margin-bottom: 100px;
+    row-gap: 32px;
+  }
+
+  .profile__title {
+    font-size: 30px;
+    margin-bottom: 26px;
+  }
+
+
+}
+
+@media (max-width: 639px) {
+  .container {
+    max-width: 430px;
+  }
+
+  .content__profile {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    row-gap: 36px;
+  }
+
+  .profile__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+}
+
+@media (max-width: 479px) {
+  .container {
+    max-width: 280px;
+  }
+
+  .profile__title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+}

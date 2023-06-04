@@ -1,0 +1,545 @@
+
+.navBlock {
+  position: sticky;
+  height: 50px;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  top: 0;
+  background-color: #F0F1F3;
+}
+
+.navBlock.active {
+  top: 100px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  column-gap: 20px;
+}
+
+.main {
+  flex-shrink: 1;
+}
+
+.createFolderAccount {
+  font-family: 'Roboto Light', sans-serif;
+  margin-top: 30px;
+  background-color: white;
+  position: absolute;
+  z-index: 55;
+  right: 0;
+  top: 50px;
+  border-radius: 10px 0 10px 10px;
+  border: 3px solid #0F3B61;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: start;
+
+
+  input {
+    margin-bottom: 15px;
+    border: 2px solid #0F3B61;
+    border-radius: 10px;
+    flex-grow: 1;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  p {
+
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+}
+
+.create {
+
+  font-family: 'Roboto Light', sans-serif;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px 0 10px 10px;
+  border: 3px solid #0F3B61;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: start;
+
+
+  input {
+    margin-bottom: 15px;
+    border: 2px solid #0F3B61;
+    border-radius: 10px;
+    flex-grow: 1;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  p {
+
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+}
+
+.createWarning {
+  color: red;
+  font-size: 12px;
+  width: 150px;
+}
+
+.addDocument {
+  top: 70px;
+  right: 0;
+  border-radius: 10px 0 10px 10px;
+  border: 3px solid #0F3B61;
+  padding: 30px;
+  p {
+    font-family: 'Roboto Light', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding-bottom: 15px;
+  }
+  background-color: white;
+}
+
+.addFolder {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.folderButtons {
+  display: flex;
+  font-family: 'Roboto Light', sans-serif;
+  column-gap: 15px;
+}
+
+.createButton {
+  padding: 10px 15px;
+  background: white;
+  border: 2px solid #0F3B61;
+  border-radius: 10px;
+  color: #0F3B61;
+  font-size: 16px;
+  &:disabled {
+    background: gray;
+  }
+
+}
+
+.addButton {
+  padding: 10px 15px;
+  background: #0F3B61;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+
+  &:disabled {
+    background: gray;
+  }
+}
+
+.navigation {
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  border: 2px solid #1B4569;
+}
+
+.inputBook {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.addBookmark {
+
+  border: 2px solid #0F3B61;
+
+  margin: 0 0 0 auto;
+  font-family: 'Roboto Light', sans-serif;
+  background-color: white;
+  width: 400px;
+
+  input {
+    margin-bottom: 15px;
+    border: 2px solid #0F3B61;
+    border-radius: 10px;
+
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  p {
+    margin: 10px 0 10px 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+
+  }
+}
+
+.bottom {
+  width: 100%;
+  height: 10px;
+  background-color: #F0F1F3;
+}
+
+
+.input_bar {
+  flex-grow: 1;
+  position: relative;
+}
+
+.search_buttons {
+  position: absolute;
+  border-top-color: red;
+  right: 0;
+  top: 35%;
+  display: none;
+
+  img {
+    max-width: 100%;
+    margin-right: 25px;
+    cursor: pointer;
+
+    &:nth-child(1) {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+
+.search {
+  height: 100%;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 20px;
+  width: 100%;
+  border-right: 2px solid #1B4569;
+  padding-left: 20px;
+}
+
+
+.content {
+  margin-top: 10px;
+  background-color: white;
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 150px;
+  padding: 20px;
+}
+
+.title {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+
+
+.icon {
+
+  cursor: pointer;
+  &.active {
+    background-color: #1B4569;
+
+    &:nth-child(1) {
+      border-right: 2px solid white;
+    }
+    img {
+      filter: brightness(0) invert(1);
+      -webkit-filter: brightness(0) invert(1);
+    }
+  }
+
+
+  display: flex;
+  border-right: 2px solid #1B4569;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  &:nth-child(6) {
+    border-right: 0;
+  }
+}
+
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 959px) {
+
+  .createFolderAccount {
+    top: 40px
+  }
+
+  .addDocument {
+    padding: 20px;
+    p {
+      font-size: 14px;
+    }
+    background-color: white;
+  }
+
+  .createButton {
+    padding: 10px 15px;
+
+    font-size: 14px;
+
+
+  }
+
+  .addButton {
+    padding: 10px 15px;
+    font-size: 14px;
+
+  }
+
+  .create {
+    margin-top: 10px;
+    padding: 20px;
+
+    input {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+
+
+
+}
+
+@media (max-width: 639px) {
+
+
+  .addBookmark {
+    width: 300px;
+    input {
+      height: 30px;
+      font-size: 12px;
+      padding: 10px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .addFolder {
+    top: 55px;
+  }
+
+
+  .title {
+    font-size: 14px;
+  }
+
+
+  .search {
+    font-size: 16px;
+    padding: 10px;
+
+    &::placeholder {
+      font-size: 16px;
+    }
+
+  }
+
+  .navBlock {
+    height: 35px;
+  }
+
+  .icon {
+    max-width: 40px;
+    max-height: 40px;
+
+    img {
+      max-width: 30px;
+    }
+  }
+
+  .navBlock.active {
+    top: 55px;
+  }
+
+  .search_buttons {
+
+    img {
+      max-width: 50%;
+      margin-right: 10px;
+
+    }
+
+  }
+
+  .createFolderAccount {
+    z-index: 55;
+    right: 0;
+    top: 35px;
+    padding: 20px;
+    align-items: start;
+    font-size: 12px;
+
+
+    input {
+      margin-bottom: 15px;
+      border: 2px solid #0F3B61;
+      border-radius: 10px;
+      flex-grow: 1;
+      height: 40px;
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    p {
+
+      font-size: 12px;
+    }
+
+
+  }
+
+  .addButton {
+    font-size: 12px;
+    padding: 8px 10px
+  }
+
+}
+
+@media (max-width: 479px) {
+
+  .title {
+    margin-top: 30px;
+  }
+
+
+  .container {
+    display: block;
+  }
+
+  .addBookmark {
+    width: 280px;
+    input {
+      height: 30px;
+      font-size: 12px;
+      padding: 10px;
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+
+  .addFolder {
+    top: 38px;
+  }
+
+  .folderButtons {
+    column-gap: 5px;
+  }
+
+  .addDocument {
+    padding: 10px;
+    p {
+      font-size: 12px;
+    }
+    background-color: white;
+  }
+
+  .createButton {
+    padding: 5px 8px;
+
+    font-size: 12px;
+
+
+  }
+
+  .addButton {
+    padding: 8px 5px;
+    font-size: 12px;
+
+  }
+
+  .create {
+    margin-top: 10px;
+    padding: 10px;
+
+    input {
+      height: 30px;
+      font-size: 12px;
+      flex-grow: 1;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+
+  .title {
+    font-size: 12px;
+  }
+
+  .search_buttons {
+
+    img {
+      max-width: 25%;
+      margin-right: 5px;
+
+    }
+
+  }
+
+
+  .icon {
+    padding: 5px;
+    max-width: 25px;
+    max-height: 25px;
+
+    img {
+      max-width: 20px;
+    }
+  }
+
+  .search {
+    padding: 5px;
+    font-size: 12px;
+    &::placeholder {
+      font-size: 10px;
+    }
+  }
+
+  .createFolderAccount {
+    top: 25px
+  }
+
+}

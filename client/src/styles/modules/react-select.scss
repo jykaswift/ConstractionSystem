@@ -1,0 +1,44 @@
+.reactSelect__control {
+  border: 2px solid #0F3B61 !important;
+  border-radius: 10px !important;
+  margin-bottom: 30px;
+  font-size: 16px !important;
+  font-family: 'Roboto Light', sans-serif !important;
+}
+
+.reactSelect__indicator-separator {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  background-color: #0F3B61 !important;
+  width: 2px !important;
+}
+
+.reactSelect__dropdown-indicator {
+  color: #0F3B61 !important;
+}
+
+.reactSelect__menu {
+  font-size: 16px !important;
+  font-family: 'Roboto Light', sans-serif !important;
+}
+
+@media (max-width: 959px) {
+
+  .reactSelect__control {
+    margin-bottom: 20px !important;;
+  }
+
+}
+
+@media (max-width: 479px) {
+
+  .reactSelect__menu {
+    font-size: 12px !important;
+    font-family: 'Roboto Light', sans-serif !important;
+  }
+
+  .reactSelect__control {
+    min-height: 30px !important;;
+    font-size: 12px !important;
+  }
+}
